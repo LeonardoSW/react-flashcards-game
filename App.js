@@ -1,10 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+import Login from './src/Telas/Login/Login';
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Teste upload to git</Text>
+      <Login/>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +15,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#43405e',
+    //alignItems: 'center',
+    //justifyContent: 'center',
   },
 });
