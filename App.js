@@ -2,11 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 import Login from './src/Telas/Login/Login';
+import Sigin from './src/Telas/Login/Singin';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Login/>
+      <Sigin/>
       <StatusBar style="auto" />
     </View>
   );

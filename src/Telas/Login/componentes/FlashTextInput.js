@@ -1,6 +1,7 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, TextInput, View } from "react-native";
 
+//export default function FlashTextInput(props) {
 export default function FlashTextInput({...txt}) {
   const [text, onChangeText] = React.useState(txt.txt);
   return (
@@ -41,5 +42,3 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 });
-
-//export default FlashTextInput;
