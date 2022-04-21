@@ -5,7 +5,7 @@ import FlashTextInput from './componentes/FlashTextInput';
 import LogoImage from '../../../assets/logo-brain.png';
 
 
-export default function Login(){
+export default function Login(props){
     return( 
     <SafeAreaView style={styles.screen}>
 
@@ -15,14 +15,20 @@ export default function Login(){
         </View>
 
         <FlashTextInput txt = "E-mail" />
-        <FlashTextInput txt = "Senha" />
+        <FlashTextInput ocultPwd = {true} txt = "Senha" />
         
         <Text style={styles.pwdrecovery}>Esqueci a senha</Text>
 
-        
-            <Button color="#6a61a1" title="Entrar"/>
-            
-            <Button color="#6a61a1" title="Cadastre-se"/>
+        <View style={styles.botaoEntrar}>
+            <Button  color="#6a61a1" title="Entrar" onPress={() => {
+                props.navigation.navigate("Menu");
+            }}/>
+        </View>
+        <View style={styles.botaoCadastrar}>
+            <Button color="#b58d97" title="Cadastre-se" onPress={() => {
+                props.navigation.navigate("Sigin");
+            }}/>
+        </View>
         
 
     </SafeAreaView>
@@ -30,6 +36,7 @@ export default function Login(){
 
 const styles = new StyleSheet.create({
     screen:{
+        backgroundColor: '#332e56',
         width:"100%",
         height: "100%",
         justifyContent:'flex-start',
@@ -63,11 +70,12 @@ const styles = new StyleSheet.create({
         marginTop: 5,
         textAlign: 'right',        
     },
-    btnentrar:{
+    botaoEntrar:{
         marginTop:20,
-        alignItems: 'center',
-        width: "100%",
-        backgroundColor: "#abc"
-        
+        width: "80%"
+    },
+    botaoCadastrar:{
+        marginTop:"30%",
+        width: "80%"
     }
 })

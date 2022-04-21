@@ -5,7 +5,7 @@ import FlashTextInput from './componentes/FlashTextInput';
 import LogoImage from '../../../assets/logo-brain.png';
 
 
-export default function Login(){
+export default function Signin(){
     return (
     <SafeAreaView style={styles.screen}>
         <View style={styles.header}>
@@ -16,10 +16,12 @@ export default function Login(){
         <Text style={styles.Txt}>Preencha os dados do seu cadastro</Text>
 
         <FlashTextInput txt = "E-mail"/>
-        <FlashTextInput txt = "Senha"/>
-        <FlashTextInput txt = "Repetir senha"/>
+        <FlashTextInput ocultPwd = {true} txt = "Senha"/>
+        <FlashTextInput ocultPwd = {true} txt = "Repetir senha"/>
 
-        <Button color="#6a61a1" title="Cadastrar"/>
+        <View style={styles.botaoCadastrar}>
+            <Button color="#6a61a1" title="Cadastrar"/>
+        </View>
 
     </SafeAreaView>
     )
@@ -27,12 +29,12 @@ export default function Login(){
 
 const styles = new StyleSheet.create({
     screen:{
-        marginTop: 25,
+        marginTop:23,
+        backgroundColor: '#332e56',
         width:"100%",
         height: "100%",
         justifyContent:'flex-start',
         alignItems: 'center',
-        
     },
     header:{
         width: "100%",
@@ -61,8 +63,8 @@ const styles = new StyleSheet.create({
         textAlign: 'center',
         //backgroundColor: "#abc"
     },
-    btnCadastro:{
-        marginTop:50,
-        color: "#6a61a1"
-    }
+    botaoCadastrar:{
+        marginTop:"10%",
+        width: "80%"
+    },
 })
