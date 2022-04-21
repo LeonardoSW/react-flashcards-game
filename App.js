@@ -8,7 +8,7 @@ import Login from './src/Telas/Login/Login';
 import Signin from './src/Telas/Login/Signin';
 
 import MyCollection from './src/Telas/Application/MyCollections';
-import Card from './src/Telas/Application/Cards';
+import Cards from './src/Telas/Application/Cards';
 import Menu from './src/Telas/Application/components/Menu';
 
 const Stack = createStackNavigator(); //he
@@ -20,6 +20,7 @@ export default function App() {
         <Stack.Screen name='Login' component={Login} /*options={{title:"Bem Vindo!"}}*//>
         <Stack.Screen name='Sigin' component={Signin}/>
         <Stack.Screen name='Menu' component={Menu}/>
+        <Stack.Screen name='Cards' component={Cards}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

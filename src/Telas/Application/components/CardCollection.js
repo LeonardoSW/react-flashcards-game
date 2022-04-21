@@ -6,17 +6,18 @@ import edit from '../../../../assets/MyCollectionImages/lapis.png';
 import remove from '../../../../assets/MyCollectionImages/excluir.png';
 
 
-export default function CardCollection (props){
+export default function CardCollection (){
+
     return (
         <SafeAreaView style = {styles.countainer}>
-            <TouchableOpacity style = {styles.card}>
+            <View style = {styles.card}>
                 <Image style={styles.image} source={image}/>
                 <Text style={styles.text}>Objetos</Text>
                 <View style={styles.viewEdit}>
                     <Image style={styles.imageOptions} source={edit}/>
                     <Image style={styles.imageOptions} source={remove}/>
                 </View>
-            </TouchableOpacity>
+            </View>
         </SafeAreaView>
     )
 }
