@@ -3,9 +3,20 @@ import { View, StyleSheet, SafeAreaView, Text, Button, Image} from 'react-native
 
 import FlashTextInput from './componentes/FlashTextInput';
 import LogoImage from '../../../assets/logo-brain.png';
-
+//import auth from '../../../firebase'
 
 export default function Login(props){
+
+    // const handleSignUp = () =>{
+    //     auth 
+    //         .createUserWithEmailAndPassword(email,pwd)
+    //         .then(userCredentials => {
+    //             const user = userCredentials.user;
+    //             console.log(user.email)
+    //     })
+    //     .catch(error => alert(error.message))
+    // }
+
     return( 
     <SafeAreaView style={styles.screen}>
 
@@ -21,7 +32,7 @@ export default function Login(props){
 
         <View style={styles.botaoEntrar}>
             <Button  color="#6a61a1" title="Entrar" onPress={() => {
-                props.navigation.navigate("Menu");
+                props.navigation.navigate("Menu",{navegationFrom:1});
             }}/>
         </View>
         <View style={styles.botaoCadastrar}>

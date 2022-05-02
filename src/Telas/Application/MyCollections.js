@@ -15,11 +15,6 @@ export default function MyCollection(props){
         </TouchableOpacity>
         <CardCollection/>
         <CardCollection/>
-        <CardCollection/>
-        <CardCollection/>
-        <CardCollection/>
-        <CardCollection/>
-        <CardCollection/>
     </ScrollView>)};
 
     const styles = StyleSheet.create({

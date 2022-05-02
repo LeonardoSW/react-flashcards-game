@@ -10,6 +10,13 @@ import { color } from "react-native/Libraries/Components/View/ReactNativeStyleAt
 
 const Drawer = createDrawerNavigator();
 
+function selectComponent(prop){
+  if(prop = 1)
+    return MyCollections;
+  else
+    return Cards;
+}
+
 export default function Menu (props){
     return (
       <Drawer.Navigator screenOptions={
@@ -18,10 +25,9 @@ export default function Menu (props){
           drawerActiveTintColor: "#fff",
           drawerInactiveTintColor:"#fff"
         }}       
-        initialRouteName="MyCollections">
-            <Drawer.Screen name="Minhas coleções" component={MyCollections} />
-            <Drawer.Screen name="teste1" component={Cards} />
-            <Drawer.Screen name="teste2" component={MyCollections} />
+        initialRouteName={props.navegationFrom}>
+            <Drawer.Screen name="Minhas coleções" component={selectComponent(props.navegationFrom)} />
+            <Drawer.Screen name="Cards" component={Cards} />
       </Drawer.Navigator>
     )
 }
